@@ -1,4 +1,4 @@
-# Aniruddha Desai (ANZ Code Problem: Calculate VWAP)
+# Aniruddha Desai (Code Problem: Calculate VWAP)
 
 ## Problem Description
 
