@@ -73,15 +73,9 @@ So if you want to run VWAP calculation on dataset of 100_thousand in Parallel mo
     - JVM memory as low as: ```-Xms2M -Xmx4M``` to Recommended: ```-Xms16M -Xmx32M```
     - Highly unlikely to crash JVM
 
-2. Parallel (3) and Multi Threaded (4) processing performs better when dataset grows larger but so does the memory consumption.
+2. Parallel (2), Single Thread (3) and Multi Thread (4) processing performs better when dataset grows larger but so does the memory consumption.
     - Optimal for more than 1 million records
-    - Need to adjust ```-Xmx``` param with increasing dataset. For 1 million records, start with Approx. ```-Xmx128M``` (suggested ```-Xmx256M``` or more)
-    - JVM can crash in case of insufficient memory.
-    - Need constant adjustments to ```-Xmx``` and ```-Xms``` parameters based on the size of input.
-
-3. Not suited for this problem due to poor performance than above 3 solutions.
-    - Need to adjust ```-Xmx``` param with increasing dataset. For 1 million records, start with Approx. ```-Xmx256M``` (suggested ```-Xmx512M``` or more)
-    - JVM can crash in case of insufficient memory
+    - Need to adjust ```-Xmx``` param with increasing dataset. For 1 million records, start with Approx. ```-Xmx256M``` or more
     - Need constant adjustments to ```-Xmx``` and ```-Xms``` parameters based on the size of input.
 
 
@@ -89,4 +83,4 @@ So if you want to run VWAP calculation on dataset of 100_thousand in Parallel mo
 
 - Sequential processing is sufficient for low memory - high performance calculation of hourly VWAP as long as dataset is smaller. Dataset of more than 1 million rows will still process with lower memory threshold but processing time will increase.
 
-- Parallel or Multi Thread processing can be opted when dataset is growing more than 1 million records, need better performance and spare more memory.
+- Parallel, Single Thread or Multi Thread processing can be opted when dataset is growing more than 1 million records, need better performance and spare more memory.
