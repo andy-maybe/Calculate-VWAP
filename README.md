@@ -49,7 +49,7 @@ crash.
 
 ## Usage
 
-Step 1: Extract zip file. (Approx. 400mb space will be needed for generating input datasets)
+Step 1: Download Release v1.0 jar. (Approx. 400mb space will be needed for generating input datasets where jar will be placed. You can easily delete dataset afterwards, its only 5 files.)
 
 Step 2: Execute ```java -cp aniruddha_desai_anz_vwap.jar org.anz.challenge.util.generator.BulkCSVGenerator``` to generate csv dataset. (It will take 2 - 3 Mins to generate dataset)
 
